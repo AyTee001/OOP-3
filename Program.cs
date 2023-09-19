@@ -8,6 +8,7 @@ namespace Palindroms
         {
             //Make sure program can understand cyrillic symbols
             Console.OutputEncoding = Console.InputEncoding = Encoding.Unicode;
+            
             Console.WriteLine("Please, give me your input and I will check it for being a palindrom");
             var input = Console.ReadLine();
 
@@ -20,11 +21,11 @@ namespace Palindroms
             var checker = new PalindromeChecker(input);
             if (checker.IsWordPalindrom())
             {
-                Console.WriteLine("That was a palindrome");
+                Console.WriteLine($"{input} is a palindrome");
             }
             else
             {
-                Console.WriteLine("That was not a palindrome");
+                Console.WriteLine($"{input} is not a palindrome");
             }
         }
     }
