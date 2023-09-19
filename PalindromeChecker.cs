@@ -13,13 +13,16 @@ namespace Palindroms
 
         public bool IsWordPalindrom()
         {
+            //Regex defines punctuation marks and whitespaces and gets rid of them
             string clearedWord = Regex.Replace(_word, @"[\s\p{P}]+", "").ToLower();
 
+            //return false if resulting word is not valid
             if (string.IsNullOrEmpty(clearedWord))
             {
                 return false;
             }
 
+            //Compare values of a string and its reversed variant
             return clearedWord.Equals(ReverseString(clearedWord));
         }
 

@@ -6,6 +6,7 @@ namespace Palindroms
     {
         static void Main(string[] args)
         {
+            //Make sure program can understand cyrillic symbols
             Console.OutputEncoding = Console.InputEncoding = Encoding.Unicode;
             Console.WriteLine("Please, give me your input and I will check it for being a palindrom");
             var input = Console.ReadLine();
